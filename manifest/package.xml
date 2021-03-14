@@ -28,6 +28,16 @@
 		<name>CustomObject</name>
 	</types>
 	<types>
+		<members>Traiblazer_Contact_Page</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Contact-Trailblazer Contact Page Layout</members>
+		<members>TrailblazerCertification__c-Trailblazer Certification Layout</members>
+		<members>TrailblazerProfileStatus__c-Trailblazer Profile Status Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
 		<members>TrailblazerProfileService</members>
 		<name>NamedCredential</name>
 	</types>

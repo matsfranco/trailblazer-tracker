@@ -155,7 +155,7 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>Trailblazer Profile Status</label>
     <nameField>
-        <label>Trailblazer Counts Name</label>
+        <label>Profile Status</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Trailblazer Profile Statuses</pluralLabel>

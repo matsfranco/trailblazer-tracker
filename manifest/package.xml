@@ -5,6 +5,7 @@
         <members>TrailblazerProfileDataModel</members>
         <members>TrailblazerProfileDataValues</members>
         <members>TrailblazerProfileTracker</members>
+        <members>TrailblazerProfileTrackerController</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -17,6 +18,8 @@
     </types>
     <types>
         <members>Contact.TrailblazerId__c</members>
+        <members>Contact.Rank__c</members>
+        <members>Contact.RankImageUrl__c</members>
         <name>CustomField</name>
     </types>
     <types>

@@ -10,7 +10,6 @@ public with sharing class TrailblazerCertificationDataService {
 
         if (response.getStatusCode() == 200) {
             String responseBody = response.getBody();
-            System.debug(responseBody);
             TrailblazerCertificationDataModel certificationData = (TrailblazerCertificationDataModel)JSON.deserialize(responseBody,TrailblazerCertificationDataModel.class);
             return certificationData.certificationsList;
         } else {

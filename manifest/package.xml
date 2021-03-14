@@ -2,6 +2,8 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>TrailheadProfileDataService</members>
+        <members>TrailheadProfileDataModel</members>
+        <members>TrailheadProfileDataValues</members>
         <name>ApexClass</name>
     </types>
     <types>

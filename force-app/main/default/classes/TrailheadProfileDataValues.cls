@@ -19,5 +19,36 @@ public with sharing class TrailheadProfileDataValues {
         return this.profileCounts[0];
     }
 
+    public String getId() {
+        return this.Id;
+    }
+
+    public String getRankLabel() {
+        return this.profileCounts[0].RankLabel;
+    }
+
+    public String getRankImageUrl() {
+        return this.profileCounts[0].RankImageUrl;
+    }
+
+    public Integer getEarnedPointTotal() {
+        return this.profileCounts[0].EarnedPointTotal;
+    }
+
+    public Integer getEarnedBadgeTotal() {
+        return this.profileCounts[0].EarnedBadgeTotal;
+    }
+
+    public Integer getCompletedTrailTotal() {
+        return this.profileCounts[0].CompletedTrailTotal;
+    }
+
+    public Integer getPointTotalForNextRank() {
+        return this.profileCounts[0].PointTotalForNextRank;
+    }
+
+    public Integer getBadgeTotalForNextRank() {
+        return this.profileCounts[0].BadgeTotalForNextRank;
+    }
 
 }

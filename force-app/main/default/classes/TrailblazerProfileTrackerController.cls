@@ -4,7 +4,7 @@ public with sharing class TrailblazerProfileTrackerController {
        
         Contact trailblazerContact = findRelatedContact(profile);
 
-        System.debug(createNewProfileStatusRecord(trailblazerContact,profileCounts));
+        createNewProfileStatusRecord(trailblazerContact,profileCounts);
 
     }
 
@@ -34,6 +34,45 @@ public with sharing class TrailblazerProfileTrackerController {
         return 'New status '+ newProfileStatus.Name + 'created for '+c.TrailblazerId__c+'!!';
     }
 
+    public static void updateContactWithCertifications(String profile, List<TrailblazerCertification> certificationList) {
+        Contact trailblazerContact = findRelatedContact(profile);
+
+        upsertCertificationListRecords(trailblazerContact, certificationList);
+    }
+
+    public static void upsertCertificationListRecords(Contact trailblazerContact, List<TrailblazerCertification> certifications) {
+
+        List<TrailblazerCertification__c> certificationsToUpsert = new List<TrailblazerCertification__c>();
+
+        for(TrailblazerCertification certification : certifications) {
+            TrailblazerCertification__c newCert = new TrailblazerCertification__c();
+            newCert.Name = certification.title;
+            newCert.Key__c = trailblazerContact.TrailblazerId__c + '/' + certification.dateCompleted + '/' + certification.title;
+            newCert.Description__c = certification.description;
+            newCert.IssueDate__c = getDateFromString(certification.dateCompleted);
+            newCert.ExpiredAt__c = getDateFromString(certification.dateExpired);
+            newCert.CertificationUrl__c = certification.certificationUrl;
+            newCert.Status__c = certification.certificationStatus;
+            newCert.CertificationImageUrl__c = certification.certificationImageUrl;
+            newCert.Contact__c = trailblazerContact.Id;
+            certificationsToUpsert.add(newCert);
+        }
+
+        upsert certificationsToUpsert  Key__c;
+
+    }
+
+    public static Date getDateFromString(String sdate) {
+        List<String> sDateSplited = sdate.split('-');
+        if(sDateSplited.size() == 3) {
+            Integer year    = Integer.valueOf(sDateSplited[0]);
+            Integer month   = Integer.valueOf(sDateSplited[1]);
+            Integer day     = Integer.valueOf(sDateSplited[2]);
+            return Date.newInstance(year,month,day);
+        } else {
+            return null;
+        } 
+    }
 
 
 }

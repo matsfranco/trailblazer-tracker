@@ -13,7 +13,7 @@ public with sharing class TrailheadProfileDataService {
             System.debug(responseBody);
             TrailheadProfileDataModel profileData = (TrailheadProfileDataModel)JSON.deserialize(responseBody,TrailheadProfileDataModel.class);
             System.debug(profileData);
-            System.debug('EarnedPointTotal: '+profileData.getProfileCount());
+            System.debug('EarnedPointTotal: '+profileData.getProfileCounts());
 
         }
 

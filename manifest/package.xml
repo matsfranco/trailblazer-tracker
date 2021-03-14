@@ -15,5 +15,10 @@
         <members>TrailblazerProfileService</members>
         <name>NamedCredential</name>
     </types>
+    <types>
+        <members>Contact.TrailblazerId__c</members>
+        <name>CustomField</name>
+    </types>
+
     <version>51.0</version>
 </Package>

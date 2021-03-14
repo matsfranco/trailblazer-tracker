@@ -14,8 +14,8 @@ public with sharing class TrailblazerProfileTrackerController {
     }
 
     public static Contact findRelatedContact(String profile) {
-        List<Contact> relatedContacts = [SELECT Id,Name,TrailblazerId__c FROM Contact WHERE TrailblazerId__c =: profile];
-        return relatedContacts == null ? relatedContacts[0] : null;
+        List<Contact> relatedContacts = [SELECT Id,FirstName,TrailblazerId__c FROM Contact WHERE TrailblazerId__c =: profile];
+        return relatedContacts != null ? relatedContacts[0] : null;
     } 
 
     public static String createNewProfileStatusRecord(Contact c, TrailblazerProfileCounts counts) {

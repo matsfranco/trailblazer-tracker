@@ -11,6 +11,8 @@ public with sharing class TrailblazerProfileTracker {
     public String getTrailblazerProfileCounts() {
         if(fetchProfileCounts()) {
             System.debug('success');
+            TrailblazerProfileTrackerController.updateContactWithProfileCounts(this.profile, this.profileCounts);
+
             return 'Success';
         } else {
             System.debug('Fail');

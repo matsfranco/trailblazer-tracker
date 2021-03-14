@@ -6,6 +6,9 @@
         <members>TrailblazerProfileDataValues</members>
         <members>TrailblazerProfileTracker</members>
         <members>TrailblazerProfileTrackerController</members>
+        <members>TrailblazerCertificationDataService</members>
+        <members>TrailblazerCertificationDataModel</members>
+        <members>TrailblazerCertification</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -20,10 +23,12 @@
         <members>Contact.TrailblazerId__c</members>
         <members>Contact.Rank__c</members>
         <members>Contact.RankImageUrl__c</members>
+        <members>Contact.Certifications__c</members>
         <name>CustomField</name>
     </types>
     <types>
         <members>TrailblazerProfileStatus__c</members>
+        <members>TrailblazerCertification__c</members>
         <name>CustomObject</name>
     </types>
     <version>51.0</version>

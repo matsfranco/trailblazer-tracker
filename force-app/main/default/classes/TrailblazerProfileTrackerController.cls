@@ -1,10 +1,5 @@
 public with sharing class TrailblazerProfileTrackerController {
     
-    
-    public TrailblazerProfileTrackerController() {
-
-    }
-
     public static void updateContactWithProfileCounts(String profile, TrailblazerProfileCounts profileCounts) {
        
         Contact trailblazerContact = findRelatedContact(profile);

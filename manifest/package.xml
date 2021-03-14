@@ -19,6 +19,9 @@
         <members>Contact.TrailblazerId__c</members>
         <name>CustomField</name>
     </types>
-
+    <types>
+        <members>TrailblazerProfileStatus__c</members>
+        <name>CustomObject</name>
+    </types>
     <version>51.0</version>
 </Package>

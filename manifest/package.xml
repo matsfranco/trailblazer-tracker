@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>TrailheadProfileDataService</members>
-        <members>TrailheadProfileDataModel</members>
-        <members>TrailheadProfileDataValues</members>
+        <members>TrailblazerProfileDataService</members>
+        <members>TrailblazerProfileDataModel</members>
+        <members>TrailblazerProfileDataValues</members>
+        <members>TrailblazerProfileTracker</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>TrailheadProfileService</members>
+        <members>TrailblazerProfileService</members>
         <name>RemoteSiteSetting</name>
     </types>    
     <types>
-        <members>TrailheadProfileService</members>
+        <members>TrailblazerProfileService</members>
         <name>NamedCredential</name>
     </types>
     <version>51.0</version>

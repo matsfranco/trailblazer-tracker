@@ -1,10 +1,10 @@
 public with sharing class TrailheadProfileDataService {
     
-    public static void getTrailheadProfileData() {
+    public static void getTrailheadProfileData(String profile) {
 
         Http http = new Http();
         HttpRequest request = new HttpRequest();
-        request.setEndpoint('callout:TrailheadProfileService');
+        request.setEndpoint('callout:TrailheadProfileService'+'/'+profile);
         request.setMethod('GET');
         HttpResponse response = http.send(request);
 
@@ -12,8 +12,6 @@ public with sharing class TrailheadProfileDataService {
             String responseBody = response.getBody();
             System.debug(responseBody);
             TrailheadProfileDataModel profileData = (TrailheadProfileDataModel)JSON.deserialize(responseBody,TrailheadProfileDataModel.class);
-            System.debug(profileData);
-            System.debug('EarnedPointTotal: '+profileData.getProfileCounts());
 
         }
 

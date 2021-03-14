@@ -4,7 +4,7 @@ public with sharing class TrailblazerProfileDataService {
 
         Http http = new Http();
         HttpRequest request = new HttpRequest();
-        request.setEndpoint('callout:TrailheadProfileService'+'/'+profile);
+        request.setEndpoint('callout:TrailblazerProfileService'+'/'+profile);
         request.setMethod('GET');
         HttpResponse response = http.send(request);
 

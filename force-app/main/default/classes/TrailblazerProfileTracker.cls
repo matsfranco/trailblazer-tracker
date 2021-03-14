@@ -19,7 +19,7 @@ public with sharing class TrailblazerProfileTracker {
             return 'Fail';
         }
     }
-
+    
     public Boolean fetchProfileCounts() {
 
         this.profileCounts = TrailblazerProfileDataService.getTrailblazerProfileData(this.profile);
@@ -28,6 +28,12 @@ public with sharing class TrailblazerProfileTracker {
         } else {
             return false;
         }
+    }
+
+    @Future(callout=true)
+    public static void fetchProfileCountsAsync(String profile) {
+        TrailblazerProfileCounts profileCounts = TrailblazerProfileDataService.getTrailblazerProfileData(profile);
+        TrailblazerProfileTrackerController.updateContactWithProfileCounts(profile, profileCounts);
     }
 
 
